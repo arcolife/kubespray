@@ -25,3 +25,7 @@ variable "default_tags" {
   description = "Default tags for all resources"
   type        = map(string)
 }
+
+variable "PROVISIONER_PUBLIC_IP" {
+  description = "Public IP of first provisioner (your laptop / cloud box)"
+}

@@ -23,6 +23,7 @@ module "aws-vpc" {
   aws_avail_zones          = slice(data.aws_availability_zones.available.names, 0, 2)
   aws_cidr_subnets_private = var.aws_cidr_subnets_private
   aws_cidr_subnets_public  = var.aws_cidr_subnets_public
+  PROVISIONER_PUBLIC_IP    = var.PROVISIONER_PUBLIC_IP
   default_tags             = var.default_tags
 }
 

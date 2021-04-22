@@ -14,6 +14,10 @@ variable "AWS_DEFAULT_REGION" {
   description = "AWS Region"
 }
 
+variable "PROVISIONER_PUBLIC_IP" {
+  description = "Public IP of first provisioner (your laptop / cloud box)"
+}
+
 //General Cluster Settings
 
 variable "aws_cluster_name" {
@@ -106,4 +110,8 @@ variable "default_tags" {
 
 variable "inventory_file" {
   description = "Where to store the generated inventory file"
+}
+
+variable "kube_insecure_apiserver_address" {
+  description = "kube insecure api server addr"
 }

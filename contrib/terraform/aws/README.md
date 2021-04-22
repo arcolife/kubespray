@@ -1,5 +1,23 @@
 # Kubernetes on AWS with Terraform
 
+## homelab add-ons
+
+```
+╰─ terraform version
+Terraform v0.15.0
+on linux_amd64
+```
+
+```
+alias getip="curl -s -4 icanhazip.com"
+
+export TF_VAR_PROVISIONER_PUBLIC_IP=`getip`/32
+
+terraform plan --var-file="credentials.tfvars" --var-file="terraform.tfvars"  -out=aws_homelab_plan
+terraform apply --var-file="credentials.tfvars" --var-file="terraform.tfvars"
+```
+
+
 ## Overview
 
 This project will create:
