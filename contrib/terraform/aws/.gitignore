@@ -1,2 +1,3 @@
 *.tfstate*
 .terraform
+aws_*_plan
