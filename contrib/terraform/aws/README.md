@@ -15,6 +15,7 @@ export TF_VAR_PROVISIONER_PUBLIC_IP=`getip`/32
 
 terraform plan --var-file="credentials.tfvars" --var-file="terraform.tfvars"  -out=aws_homelab_plan
 terraform apply --var-file="credentials.tfvars" --var-file="terraform.tfvars"
+terraform destroy --var-file="credentials.tfvars" --var-file="terraform.tfvars"
 ```
 
 
