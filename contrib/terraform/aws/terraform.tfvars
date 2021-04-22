@@ -3,13 +3,15 @@ aws_cluster_name = "homelab"
 
 #VPC Vars
 aws_vpc_cidr_block       = "10.250.192.0/18"
-aws_cidr_subnets_private = ["10.250.192.0/20"]
-aws_cidr_subnets_public  = ["10.250.224.0/20"]
-# aws_cidr_subnets_public  = ["10.250.224.0/20", "10.250.240.0/20"]
+# aws_cidr_subnets_private = ["10.250.192.0/20"]
+aws_cidr_subnets_private = ["10.250.192.0/20", "10.250.208.0/20"]
+# aws_cidr_subnets_public  = ["10.250.224.0/20"]
+aws_cidr_subnets_public  = ["10.250.224.0/20", "10.250.240.0/20"]
 
 #Bastion Host
-aws_bastion_size = "t3.medium"
-# count depends on aws_cidr_subnets_public list
+aws_bastion_size = "t3.micro"
+# ^count depends on length of aws_cidr_subnets_public
+
 
 #Kubernetes Cluster
 
